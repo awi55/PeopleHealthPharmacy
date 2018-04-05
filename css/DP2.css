@@ -1,0 +1,198 @@
+#backgrd 
+{
+    background-color: #222930;
+}
+        
+.nav_header 
+{
+    padding: 20px;
+}
+
+.navbar 
+{
+    border: none;
+    letter-spacing: 2px;
+    background-color: #222930;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.navbar li a, .navbar .navbar-brand 
+{
+    color: white!important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a 
+{
+    color: #fff !important;
+    background-color: #4EB1BA !important;
+    border-radius: 20px;
+}
+
+.navbar-default 
+{
+    border-color: transparent;
+    color: orange!important;
+}
+
+#logo-text 
+{
+    color: #4EB1BA !important;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+hr 
+{
+    border: none;
+    height: 5px;
+    background-color: #4EB1BA !important;
+}
+
+ .centerHeadingContent 
+{
+    color:  #222930 !important;
+    font-family:cursive;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+        
+.centerHeading 
+{
+    background-color: #4EB1BA !important;
+    border: none;
+}
+
+ .asterisk 
+{
+    color: red !important;
+    font-size: 20px;
+}
+        
+.control-label 
+{
+    color: #fff;
+}
+
+
+p
+{
+    color: #fff;
+}
+
+ul
+{
+    color: #fff;
+}
+
+.button-add 
+{
+    color: white !important;
+    background-color: #4EB1BA !important;
+    font-size: 18px;
+    width: 9em;    
+}
+
+.table-responsive 
+{
+    background-color: #4EB1BA !important;
+    color: white!important;
+    table-layout: fixed;
+}
+
+th
+{
+    background-color: lightblue;
+    font-size: 20px;
+    color: #222930 !important;
+    text-decoration: underline;
+    //font-weight: bold;
+    font-family: cursive;
+}
+        
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th 
+{
+    background-color: #fff !important;
+    //font-weight: bold;
+    //font-size: 18px;
+    color: #4EB1BA!important;
+    table-layout: fixed;
+    //transition: 25ms; #4EB1BA #222930
+}
+
+.sortingButton
+{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    border-color: lightblue;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+tr 
+{
+    width: 100%;
+    display: inline-table;
+    table-layout: fixed;
+}
+
+table
+{
+    /* height: 540px; // use this when table data exceeds 10 */
+    display: inline-block;
+}
+
+tbody
+{
+    height: 120px;
+    overflow-y: auto;
+}
+
+.button-edit
+{
+    font-size: 12px;
+    width: 10em;    
+}
+
+.low-stock {
+    color: yellow;
+    background-color: red;
+}
+/* -------------------------------------------------------------------------------------------------------------- */
+
+/*
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+
+*/
+

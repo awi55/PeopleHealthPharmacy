@@ -1,0 +1,166 @@
+ <div class = "container-fluid" data-ng-controller = "itemsController">
+	<div class="transaction-content">
+		<div class="container-fluid">
+			<div class="row page-header centerHeading">
+				<div class="col-xs-12">
+					<div class="text-center centerHeadingContent">
+						<h2> Enter Item Details</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><br/>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12">
+				<form class="form-horizontal">
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="itemsID"><span class="asterisk">*</span>Item's ID:</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="itemsID" placeholder="Enter items ID" data-ng-model="itemID"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="itemTitle"><span class="asterisk">*</span>Item's title:</label>
+							<div class="col-sm-8"> 
+								<input type="text" class="form-control" id="itemTitle" placeholder="Enter item's title" data-ng-model="itemTitle"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="itemDesc"><span class="asterisk">*</span>Item Description:</label>
+							<div class="col-sm-8">
+								<input type="text" class="form-control" id="itemDesc" placeholder="Enter item's description" data-ng-model="itemDesc"/>
+							</div>
+						</div>
+                    </div>
+					<div class="col-sm-6">
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="price"><span class="asterisk">*</span>Price:</label>
+							<div class="col-sm-8"> 
+								<input type="text" class="form-control" id="price" placeholder="Enter price" data-ng-model="price"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="quantity"><span class="asterisk">*</span>Quantity:</label>
+							<div class="col-sm-8"> 
+								<input type="text" class="form-control" id="quantity" data-ng-model="quantity"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="control-label col-sm-3" for="date"><span class="asterisk">*</span>Date:</label>
+							<div class="col-sm-8"> 
+								<input type="text" class="form-control" id="date" placeholder="dd/mm/yyyy" data-ng-model="date"/>
+							</div>
+						</div>
+						<div class="form-group col-sm-11"> 
+							<div class="col-sm-offset-9 text-right">
+								<button type="submit" class="btn button-add" data-ng-click="addItem()" >Add Record</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div><br/>
+	<div class="modal fade" id="editItemModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">Edit a Item Record</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class = "row form-group">
+							<label class = "col-md-4 form-control-label" for = "edititemid">Item ID *</label>
+							<div class = "col-md-8">
+								<input type = "text" class = "form-control" id = "edititemid" data-ng-model = "edititemid" disabled="disabled"/>
+							</div>
+						</div>
+						<div class = "row form-group">
+							<label class = "col-md-4 form-control-label" for = "edititemtitle">Item's title *</label>
+							<div class = "col-md-8">
+								<input type = "text" class = "form-control" id = "edititemtitle" data-ng-model = "edititemtitle"/>
+							</div>
+						</div>
+						<div class = "row form-group">
+							<label class = "col-md-4 form-control-label" for = "edititemdesc">Items *</label>
+							<div class = "col-md-8">
+								<input type = "text" class = "form-control" id = "edititemdesc" data-ng-model = "edititemdesc"/>
+							</div>
+						</div>
+						<div class = "row form-group">
+							<label class = "col-md-4 form-control-label" for = "editprice">Price *</label>
+							<div class = "col-md-8">
+								<input type = "text" class = "form-control" id = "editprice" data-ng-model = "editprice"/>
+							</div>
+						</div>
+						<div class = "row form-group">
+							<label class = "col-md-4 form-control-label" for = "editquantity">Quantity *</label>
+							<div class = "col-md-8">
+								<input type = "text" class = "form-control" id = "editquantity" data-ng-model = "editquantity"/>
+							</div>
+						</div>
+						<div class = "row form-group">
+							<label class = "col-md-4 form-control-label" for = "editdate">Date *</label>
+							<div class = "col-md-8">
+								<input type = "text" class = "form-control" id = "editdate" data-ng-model = "editdate"/>
+							</div>
+						</div>
+						<div class = "modal-footer">
+							<button type = "button" class = "btn btn-danger pull-left" data-ng-click = "deleteItemRecord()">Delete</button>
+							<button type = "button" class = "btn btn-default" data-dismiss = "modal">Cancel</button>
+							<button type = "button" class = "btn btn-success" data-ng-click = "confirmEdit()">Edit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="sales-content">
+		<div class="container-fluid">
+			<div class="row page-header centerHeading">
+				<div class="col-xs-12">
+					<div class="text-center centerHeadingContent">
+						<h2>Item Record</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><br/>
+
+	<table class="table table-bordered table-responsive table-hover">
+		<thead>
+			<tr>
+                <th id="Items_ID">Items ID<button ng-click="sortBy('itemID')" class="sortingButton"><i class="fa fa-fw fa-sort"></i></button></th>
+				<th id="Items_Title">Item Title<button ng-click="sortBy('itemTitle')" class="sortingButton"><i class="fa fa-fw fa-sort"></i></button></th>
+				<th id="Items_Desc">Item Description</th>
+				<th id="Items_Price">Price<button ng-click="sortBy('price')" class="sortingButton"><i class="fa fa-fw fa-sort"></i></button></th>
+				<th id="Quantity">Quantity<button ng-click="sortBy('quantity')" class="sortingButton"><i class="fa fa-fw fa-sort"></i></button></th>
+				<th id="Date">Date<button ng-click="sortBy('date')" class="sortingButton"><i class="fa fa-fw fa-sort"></i></button></th>
+				<th id="Action">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr data-ng-repeat = "item in itemsData | orderBy:propertyName:reverse" | ng-class="{'low-stock': item.quantity < 5}">
+				<td class="filterable-cell">{{item.itemID}}</td>
+				<td class="filterable-cell">{{item.itemTitle}}</td>
+				<td class="filterable-cell">{{item.itemDesc}}</td>
+				<td class="filterable-cell">{{item.price}}</td>
+				<td class="filterable-cell">{{item.quantity}}</td>
+				<td class="filterable-cell">{{item.date}}</td>
+				<td class="text-center filterable-cell"><button type="button" class="btn btn-warning button-edit" data-ng-click = "editItem(item)">Edit</button></td>
+			</tr>
+		</tbody>
+	</table><br/><hr>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<footer class="text-muted text-center"><h4>People Health Pharmacy (PHP) Inc. Database</h4></footer>
+			</div>
+		</div>
+	</div>
+</div>
